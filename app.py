@@ -16,7 +16,7 @@ def predict():
     level = ['air_conditioner', 'car_horn', 'children_playing', 'dog_bark', 'drilling',
              'engine_idling', 'gun_shot', 'jackhammer', 'siren', 'street_music']
 
-    model = tf.keras.models.load_model('C:/Users/hyoje/Desktop/BehinU_AI/behindU_AI.h5')
+    model = tf.keras.models.load_model('behindU_AI.h5')
     file = request.files['file']
     file_path = os.path.join('dataset', file.filename)
     file.save(file_path)
@@ -105,4 +105,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5005, debug=True)
+    app.run(host="0.0.0.0", port=5010, debug=True)
